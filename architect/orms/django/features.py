@@ -2,6 +2,7 @@
 Defines features for the Django ORM.
 """
 
+import django
 from django.conf import settings
 from django.db import router, connections, transaction
 from django.db.utils import ConnectionDoesNotExist
@@ -10,7 +11,7 @@ from django.utils.functional import cached_property
 from ..bases import BasePartitionFeature, BaseOperationFeature
 from ...exceptions import PartitionColumnError, OptionNotSetError, OptionValueError
 
-if django.VERSION < (1, 8, 0):
+if django.VERSION < (1, 8):
     from django.db.models.fields import FieldDoesNotExist
 else:
     from django.core.exceptions import FieldDoesNotExist
