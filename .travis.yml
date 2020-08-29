@@ -181,6 +181,7 @@ before_script:
   - mysql -e 'create database architect;' -u root
 services:
   - postgresql
+  - mysql
 install:
   - travis_retry pip install -r tests/requirements.txt
   - travis_retry pip install coveralls psycopg2 pymysql
