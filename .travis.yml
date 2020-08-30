@@ -93,6 +93,14 @@ matrix:
       env: DJANGO='django>=3.1.0,<3.2.0' DB='all'
     - python: 3.4
       env: DJANGO='django>=1.4.0,<1.5.0' DB='all'
+    - python: 3.4
+      env: DJANGO='django>=2.1.0,<2.2.0' DB='all'
+    - python: 3.4
+      env: DJANGO='django>=2.2.0,<2.3.0' DB='all'
+    - python: 3.4
+      env: DJANGO='django>=3.0.0,<3.1.0' DB='all'
+    - python: 3.4
+      env: DJANGO='django>=3.1.0,<3.2.0' DB='all'
     - python: 3.5
       env: DJANGO='django>=1.4.0,<1.5.0' DB='all'
     - python: 3.5
@@ -101,6 +109,10 @@ matrix:
       env: DJANGO='django>=1.6.0,<1.7.0' DB='all'
     - python: 3.5
       env: DJANGO='django>=1.7.0,<1.8.0' DB='all'
+    - python: 3.5
+      env: DJANGO='django>=3.0.0,<3.1.0' DB='all'
+    - python: 3.5
+      env: DJANGO='django>=3.1.0,<3.2.0' DB='all'
     - python: 3.6
       env: DJANGO='django>=1.4.0,<1.5.0' DB='all'
     - python: 3.6
@@ -126,7 +138,6 @@ services:
 install:
   - travis_retry pip install -r tests/requirements.txt
   - travis_retry pip install coveralls psycopg2 pymysql
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.2' ]]; then travis_retry pip install 'coverage<4.0' 'pymysql<0.7.0'; fi
   - if [[ $DJANGO ]]; then travis_retry pip install $DJANGO; fi
   - if [[ $PEEWEE ]]; then travis_retry pip install $PEEWEE; fi
   - if [[ $PONY ]]; then travis_retry pip install $PONY; fi
