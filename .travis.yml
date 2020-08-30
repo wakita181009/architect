@@ -81,6 +81,16 @@ matrix:
       env: SQLOBJECT='sqlobject>=2.1.0,<2.2.0' DB='all'
     - python: 3.6
       env: SQLOBJECT='sqlobject>=2.2.0,<2.3.0' DB='all'
+    - python: 2.7
+      env: DJANGO='django>=2.0.0,<2.1.0' DB='all'
+    - python: 2.7
+      env: DJANGO='django>=2.1.0,<2.2.0' DB='all'
+    - python: 2.7
+      env: DJANGO='django>=2.2.0,<2.3.0' DB='all'
+    - python: 2.7
+      env: DJANGO='django>=3.0.0,<3.1.0' DB='all'
+    - python: 2.7
+      env: DJANGO='django>=3.1.0,<3.2.0' DB='all'
     - python: 3.4
       env: DJANGO='django>=1.4.0,<1.5.0' DB='all'
     - python: 3.5
