@@ -1,9 +1,6 @@
 sudo: false
 language: python
 python:
-  - 2.7
-  - 3.4
-  - 3.5
   - 3.6
 env:
   - DJANGO='django>=3.1.0,<3.2.0' DB='all'
@@ -16,8 +13,8 @@ services:
 install:
   - travis_retry pip install -r tests/requirements.txt
   - travis_retry pip install coveralls psycopg2 pymysql
-  - if [[ $DJANGO == 'django>=3.1.0,<3.2.0' ]]; then travis_retry pip install 'mysqlclient>=1.4.0'; fi
   - if [[ $DJANGO ]]; then travis_retry pip install $DJANGO; fi
+  - if [[ $DJANGO == 'django>=3.1.0,<3.2.0' ]]; then travis_retry pip install 'mysqlclient>=1.4.0'; fi
   - if [[ $PEEWEE ]]; then travis_retry pip install $PEEWEE; fi
   - if [[ $PONY ]]; then travis_retry pip install $PONY; fi
   - if [[ $SQLALCHEMY ]]; then travis_retry pip install $SQLALCHEMY; fi
