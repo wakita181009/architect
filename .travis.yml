@@ -12,7 +12,7 @@ services:
   - mysql
 install:
   - travis_retry pip install -r tests/requirements.txt
-  - travis_retry pip install coveralls psycopg2 pymysql mysqlclient
+  - travis_retry pip install coveralls psycopg2 mysqlclient
   - if [[ $DJANGO ]]; then travis_retry pip install $DJANGO; fi
   - if [[ $PEEWEE ]]; then travis_retry pip install $PEEWEE; fi
   - if [[ $PONY ]]; then travis_retry pip install $PONY; fi
