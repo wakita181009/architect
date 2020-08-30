@@ -37,6 +37,11 @@ env:
   - DJANGO='django>=1.9.0,<1.10.0' DB='all'
   - DJANGO='django>=1.10.0,<1.11.0' DB='all'
   - DJANGO='django>=1.11.0,<1.12.0' DB='all'
+  - DJANGO='django>=2.0.0,<2.1.0' DB='all'
+  - DJANGO='django>=2.1.0,<2.2.0' DB='all'
+  - DJANGO='django>=2.2.0,<2.3.0' DB='all'
+  - DJANGO='django>=3.0.0,<3.1.0' DB='all'
+  - DJANGO='django>=3.1.0,<3.2.0' DB='all'
 matrix:
   fast_finish: true
   exclude:
